@@ -15,6 +15,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://workout:RussianAK47@ds259119.mlab.com:59119/heroku_9lrwwpmn", {
+  useUnifiedTopology:true,
   useMongoClient: true,
   useNewUrlParser: true,
   useFindAndModify: false
